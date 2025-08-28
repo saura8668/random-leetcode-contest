@@ -7,8 +7,8 @@ import { getLatestContest } from '../utils/scrapeContest.js';
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'saurajit.nandi1996@gmail.com',
-        pass: 'ihha ozpq brls rqud'
+        user: 'xxx',
+        pass: 'xxx'
     }
 });
 
@@ -23,7 +23,7 @@ async function sendContestEmails() {
 
         for (const user of users) {
             transporter.sendMail({
-                from: 'saurajit.nandi1996@gmail.com',
+                from: 'xxx',
                 to: user.email,
                 subject: 'Last LeetCode Contest Questions',
                 text: questions.url
