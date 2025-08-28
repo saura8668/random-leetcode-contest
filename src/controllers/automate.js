@@ -37,5 +37,5 @@ async function sendContestEmails() {
     }
 }
 
-// Schedule to run every Monday at 10:00 AM
-cron.schedule('22 12 * * *', sendContestEmails);
+// Schedule to run every Monday at 12:55 PM
+cron.schedule('55 12 * * *', sendContestEmails);
