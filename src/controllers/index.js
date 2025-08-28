@@ -10,8 +10,8 @@ export const subscribeUser = async (req, res) => {
         if (!client.topology || !client.topology.isConnected()) {
             await client.connect();
         }
-        const db = client.db('leetcode');
-        const collection = db.collection('users');
+        const db = client.db(process.env.DB_SCHEMA);
+        const collection = db.collection(process.env.DB_COLLECTION);
         await collection.insertOne({ email });
         res.send('User subscribed successfully!');
     } catch (err) {
